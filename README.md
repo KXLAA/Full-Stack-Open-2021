@@ -10,3 +10,7 @@ This repository contains exercise solutions to the 2021 edition of the `Full Sta
   - [1.1-1.5: courseinfo](part1/courseinfo)
   - [1.6-1.11: unicafe](part1/unicafe)
   - [1.12-1.14: anecdotes](part1/anecdotes)
+- [Part 2: Communicating with server](./part2)
+  - [2.1-2.5: Course information](part2/courseinfo)
+  - [2.6-2.11, 2.15-2.20: The Phonebook](part2/phonebook)
+  - [2.12-2.14: Data for countries](part2/countries)
