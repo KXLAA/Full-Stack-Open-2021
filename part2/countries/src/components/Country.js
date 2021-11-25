@@ -12,6 +12,8 @@ export const Country = ({ foundCountry }) => {
     });
   }, [baseURL]);
 
+  console.log(weather);
+
   return (
     <>
       <h1>{foundCountry.name.common}</h1>
@@ -27,12 +29,15 @@ export const Country = ({ foundCountry }) => {
       </ul>
       <img alt={foundCountry.name.common} src={foundCountry.flags.svg} />
 
-      <h3>Weather in {weather.location.name} </h3>
-      <p>Temperature: {weather.current?.temperature}</p>
-      <img src={weather.current.weather_icons} alt={weather.location.name} />
+      <h3>Weather in {weather?.location?.name} </h3>
+      <p>Temperature: {weather?.current?.temperature}</p>
+      <img
+        src={weather?.current?.weather_icons}
+        alt={weather?.location?.name}
+      />
       <p>
-        wind {weather.current.wind_speed} direction{" "}
-        {weather.current.wind_dir.toUpperCase()}
+        wind {weather?.current?.wind_speed} direction{" "}
+        {weather?.current?.wind_dir.toUpperCase()}
       </p>
     </>
   );
