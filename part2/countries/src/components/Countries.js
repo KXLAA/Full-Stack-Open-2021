@@ -12,6 +12,7 @@ export const Countries = ({ foundCountry }) => {
       {showMore && (
         <div>
           <h1>{foundCountry.name.common}</h1>
+          {/* optional chaining to prevent errors  */}
           <p>{foundCountry?.capital?.map((sing) => sing)}</p>
           <p>{foundCountry.population}</p>
 

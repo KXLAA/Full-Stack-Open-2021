@@ -15,8 +15,6 @@ function App() {
     });
   }, [apiURL]);
 
-  console.log(foundCountries);
-
   return (
     <>
       <Search
