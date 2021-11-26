@@ -3,11 +3,13 @@ import { Filter } from "./components/Filter";
 import numberService from "./services/numbers";
 import { Numbers } from "./components/Numbers";
 import { Form } from "./components/From";
+import Notification from "./components/Notification";
 
 const App = () => {
   const [numbers, setNumbers] = useState([]);
   const [foundNumbers, setFoundNumbers] = useState([]);
   const [newNumber, setNewNumber] = useState({ name: "", number: "" });
+  const [notification, setNotification] = useState(null);
 
   useEffect(() => {
     numberService.getAll().then((initialNum) => {
@@ -47,14 +49,28 @@ const App = () => {
       numberService
         .update(numberToUpdate.id, updatedNumber)
         .then((returnedNumber) => {
-          setNumbers((number) =>
-            number.id !== returnedNumber.name ? number : returnedNumber
+          setNumbers(
+            numbers.map((number) =>
+              number.id !== returnedNumber.name ? number : returnedNumber
+            )
           );
+          //Show notification
+          setNotification(`Updated: ${returnedNumber.name}`);
+          //clear notification after 5 seconds
+          setTimeout(() => {
+            setNotification(null);
+          }, 5000);
         });
     } else {
       //if it does not, add new Number
       numberService.create(newNumberObj).then((newNumber) => {
         setFoundNumbers([...foundNumbers, newNumber]);
+        //Show notification
+        setNotification(`Added: ${newNumberObj.name}`);
+        //clear notification after 5 seconds
+        setTimeout(() => {
+          setNotification(null);
+        }, 5000);
       });
     }
     setNewNumber({ name: " ", number: " " });
@@ -77,13 +93,14 @@ const App = () => {
 
   return (
     <div>
+      <Notification name={notification} />
       <h2>Phone-Book</h2>
       <Filter numbers={numbers} setFoundNumbers={setFoundNumbers} />
 
       <h2>Numbers</h2>
       <Numbers foundNumbers={foundNumbers} deleteNumbers={deleteNumbers} />
-
       <h2>Add New Number</h2>
+
       <Form
         newNumber={newNumber}
         handleChange={handleChange}
