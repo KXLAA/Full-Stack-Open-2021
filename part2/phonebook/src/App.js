@@ -4,12 +4,14 @@ import numberService from "./services/numbers";
 import { Numbers } from "./components/Numbers";
 import { Form } from "./components/From";
 import Notification from "./components/Notification";
+import Error from "./components/Error";
 
 const App = () => {
   const [numbers, setNumbers] = useState([]);
   const [foundNumbers, setFoundNumbers] = useState([]);
   const [newNumber, setNewNumber] = useState({ name: "", number: "" });
   const [notification, setNotification] = useState(null);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     numberService.getAll().then((initialNum) => {
@@ -60,6 +62,15 @@ const App = () => {
           setTimeout(() => {
             setNotification(null);
           }, 5000);
+        })
+        .catch((error) => {
+          console.log(error);
+          setError(
+            `Information on${updatedNumber.name} has already been removed from server`
+          );
+          setTimeout(() => {
+            setError(null);
+          }, 5000);
         });
     } else {
       //if it does not, add new Number
@@ -93,6 +104,7 @@ const App = () => {
 
   return (
     <div>
+      <Error error={error} />
       <Notification name={notification} />
       <h2>Phone-Book</h2>
       <Filter numbers={numbers} setFoundNumbers={setFoundNumbers} />

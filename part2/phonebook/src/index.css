@@ -7,12 +7,22 @@ input {
   padding: 1rem 2rem;
 }
 
-.error {
+.success {
   color: green;
   background: lightgrey;
   font-size: 20px;
   border-style: solid;
   border-color: green;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.error {
+  color: red;
+  background: lightgrey;
+  font-size: 20px;
+  border-style: solid;
   border-radius: 5px;
   padding: 10px;
   margin-bottom: 10px;
