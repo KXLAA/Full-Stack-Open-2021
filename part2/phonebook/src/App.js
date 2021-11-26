@@ -1,87 +1,94 @@
 import React, { useState, useEffect } from "react";
 import { Filter } from "./components/Filter";
-import { PersonForm } from "./components/PersonForm";
-import { Persons } from "./components/Persons";
 import numberService from "./services/numbers";
+import { Numbers } from "./components/Numbers";
+import { Form } from "./components/From";
 
 const App = () => {
-  const [persons, setPersons] = useState([]);
-  const [newName, setNewName] = useState({ name: "", number: "" });
-  const [foundUsers, setFoundUsers] = useState([...persons]);
-  // const [search, setSearch] = useState("");
+  const [numbers, setNumbers] = useState([]);
+  const [foundNumbers, setFoundNumbers] = useState([]);
+  const [newNumber, setNewNumber] = useState({ name: "", number: "" });
 
   useEffect(() => {
     numberService.getAll().then((initialNum) => {
-      setPersons([initialNum]);
-      setFoundUsers([initialNum]);
+      setNumbers(initialNum);
+      setFoundNumbers(initialNum);
     });
   }, []);
 
-  console.log(foundUsers);
-
-  const addToBook = (event) => {
+  const addNumbers = (event) => {
     event.preventDefault();
 
-    const numObj = {
-      name: newName.name,
-      number: newName.number,
+    //Make new number object
+    const newNumberObj = {
+      name: newNumber.name,
+      number: newNumber.number,
       date: new Date().toISOString(),
     };
 
-    const userToUpdate = foundUsers.find((user) => user.name === numObj.name);
+    //Check if new number object matches with any currently existing number
+    const numberToUpdate = numbers.find(
+      (number) => number.name === newNumberObj.name
+    );
 
-    if (userToUpdate) {
+    //if it does, update old number object, with new number object
+    if (numberToUpdate) {
       window.confirm(
-        `${userToUpdate.name} is already added to the phonebook, replace the old number with a new one ?`
+        `${newNumberObj.name} is already added to the phonebook, replace the old number with a new one ?`
       );
-      const updatedUser = {
-        ...userToUpdate,
-        name: userToUpdate.name,
-        number: userToUpdate.number,
+
+      const updatedNumber = {
+        ...numberToUpdate,
+        name: newNumberObj.name,
+        number: newNumberObj.number,
         date: new Date().toISOString(),
       };
-      numberService.update(userToUpdate.id, updatedUser).then((returnedNum) => {
-        console.log(userToUpdate.id);
-        console.log(returnedNum);
-        console.log(returnedNum.id);
-      });
+
+      numberService
+        .update(numberToUpdate.id, updatedNumber)
+        .then((returnedNumber) => {
+          setNumbers((number) =>
+            number.id !== returnedNumber.name ? number : returnedNumber
+          );
+        });
     } else {
-      numberService.create(numObj).then((returnedNum) => {
-        setFoundUsers([...foundUsers, returnedNum]);
+      //if it does not, add new Number
+      numberService.create(newNumberObj).then((newNumber) => {
+        setFoundNumbers([...foundNumbers, newNumber]);
       });
     }
-
-    setNewName({ name: " ", number: " " });
+    setNewNumber({ name: " ", number: " " });
   };
 
-  console.log(foundUsers);
+  const deleteNumbers = (userId, user) => {
+    if (window.confirm(` Are you sure you want to delete ${user} ? `)) {
+      numberService.deleteNum(userId);
+      setFoundNumbers(foundNumbers.filter((user) => user.id !== userId));
+    }
+  };
 
   const handleChange = (event) => {
     const { name, value } = event.target;
-    setNewName((prevName) => ({
+    setNewNumber((prevName) => ({
       ...prevName,
       [name]: value,
     }));
   };
 
-  const deleteNum = (userId, user) => {
-    if (window.confirm(` Are you sure you want to delete ${user} ? `)) {
-      numberService.deleteNum(userId);
-      setFoundUsers(foundUsers.filter((user) => user.id !== userId));
-    }
-  };
-
   return (
     <div>
-      <h2>Phonebook</h2>
-      <Filter persons={persons} setFoundUsers={setFoundUsers} />
-      <PersonForm
-        value={newName}
-        handleChange={handleChange}
-        addToBook={addToBook}
-      />
+      <h2>Phone-Book</h2>
+      <Filter numbers={numbers} setFoundNumbers={setFoundNumbers} />
+
       <h2>Numbers</h2>
-      <Persons foundUsers={foundUsers} deleteNum={deleteNum} />
+      <Numbers foundNumbers={foundNumbers} deleteNumbers={deleteNumbers} />
+
+      <h2>Add New Number</h2>
+      <Form
+        newNumber={newNumber}
+        handleChange={handleChange}
+        addNumbers={addNumbers}
+      />
     </div>
   );
 };

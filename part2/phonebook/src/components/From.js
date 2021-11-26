@@ -1,27 +1,29 @@
 import React from "react";
 
-export const PersonForm = ({ value, handleChange, addToBook }) => {
+export const Form = ({ newNumber, handleChange, addNumbers }) => {
+  console.log(newNumber);
   return (
     <>
       <form>
         <label htmlFor="name">Full Name:</label>
+        {"  "}
         <input
+          required
           name="name"
           type="text"
-          value={value.name}
+          value={newNumber.name}
           onChange={handleChange}
         />
-
-        <label htmlFor="number">Phone Number:</label>
+        {"  "}
+        <label htmlFor="number">Phone Number:</label> {"  "}
         <input
           name="number"
           type="text"
-          value={value.number}
+          value={newNumber.number}
           onChange={handleChange}
         />
-
-        <button onClick={addToBook} type="submit">
-          add
+        <button onClick={addNumbers} type="submit">
+          ADD NUMBER
         </button>
       </form>
     </>

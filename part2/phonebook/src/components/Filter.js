@@ -1,24 +1,24 @@
 import React, { useState } from "react";
 
-export const Filter = ({ persons, setFoundUsers }) => {
+export const Filter = ({ numbers, setFoundNumbers }) => {
   const [search, setSearch] = useState("");
 
   const filter = (event) => {
     const searchInput = event.target.value;
     if (searchInput !== "") {
-      const results = persons.filter((person) =>
-        person.name.toLowerCase().includes(searchInput.toLowerCase())
+      const results = numbers.filter((number) =>
+        number.name.toLowerCase().includes(searchInput.toLowerCase())
       );
-      setFoundUsers(results);
+      setFoundNumbers(results);
     } else {
-      setFoundUsers(persons);
+      setFoundNumbers(numbers);
     }
     setSearch(searchInput.trim());
   };
 
   return (
     <>
-      <label htmlFor="name">filer shown with: </label>
+      <label htmlFor="name">Filter shown with: </label>
       <input
         type="search"
         value={search}
