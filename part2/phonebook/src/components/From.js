@@ -1,7 +1,6 @@
 import React from "react";
 
 export const Form = ({ newNumber, handleChange, addNumbers }) => {
-  console.log(newNumber);
   return (
     <>
       <form>
