@@ -17,4 +17,6 @@ This repository contains exercise solutions to the 2021 edition of the `Full Sta
 - [Part 3: Programming a server with NodeJS and Express](./part3)
   - [3.1-3.9: Phonebook backend](https://github.com/KXLAA/phonebook-backend)
   - [3.10-3.11: Phonebook Full stack deploy to heroku](https://phonebook-backend-full-stack-o.herokuapp.com/)
-  <!-- - [3.13-3.21: Phonebook database]() -->
+  - [3.12-3.18: Phonebook database](https://github.com/KXLAA/phonebook-backend/tree/main/models)
+  - [3.19-3.21: Validation](https://github.com/KXLAA/phonebook-backend/blob/main/models/person.js)
+  -  [3.22: ESLint](https://github.com/KXLAA/phonebook-backend/blob/main/models/person.js)

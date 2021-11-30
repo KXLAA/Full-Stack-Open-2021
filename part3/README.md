@@ -5,3 +5,6 @@
 ## Table of Content
   - [3.1-3.9: Phonebook backend](https://github.com/KXLAA/phonebook-backend)
   - [3.10-3.11: Phonebook deploy to heroku](https://phonebook-backend-full-stack-o.herokuapp.com/)
+  - [3.12-3.18: Phonebook database](https://github.com/KXLAA/phonebook-backend/tree/main/models)
+  -  [3.19-3.21: Validation](https://github.com/KXLAA/phonebook-backend/blob/main/models/person.js)
+  -  [3.22: ESLint](https://github.com/KXLAA/phonebook-backend/blob/main/models/person.js)
