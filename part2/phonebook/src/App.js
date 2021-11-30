@@ -74,15 +74,23 @@ const App = () => {
         });
     } else {
       //if it does not, add new Number
-      numberService.create(newNumberObj).then((newNumber) => {
-        setFoundNumbers([...foundNumbers, newNumber]);
-        //Show notification
-        setNotification(`Added: ${newNumberObj.name}`);
-        //clear notification after 5 seconds
-        setTimeout(() => {
-          setNotification(null);
-        }, 5000);
-      });
+      numberService
+        .create(newNumberObj)
+        .then((newNumber) => {
+          setFoundNumbers([...foundNumbers, newNumber]);
+          //Show notification
+          setNotification(`Added: ${newNumberObj.name}`);
+          //clear notification after 5 seconds
+          setTimeout(() => {
+            setNotification(null);
+          }, 5000);
+        })
+        .catch((error) => {
+          setNotification(`error: ${error}`);
+          setTimeout(() => {
+            setError(null);
+          }, 5000);
+        });
     }
     setNewNumber({ name: " ", number: " " });
   };
