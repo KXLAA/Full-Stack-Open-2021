@@ -20,3 +20,6 @@ This repository contains exercise solutions to the 2021 edition of the `Full Sta
   - [3.12-3.18: Phonebook database](https://github.com/KXLAA/phonebook-backend/tree/main/models)
   - [3.19-3.21: Validation](https://github.com/KXLAA/phonebook-backend/blob/main/models/person.js)
   -  [3.22: ESLint](https://github.com/KXLAA/phonebook-backend/blob/main/models/person.js)
+- [Part 4: Testing Express servers, user administration](./part4)
+  - [4.1-4.14: Testing Express servers](https://github.com/KXLAA/blog-list-backend)
+  - [4.15-4.23: user administration](https://github.com/KXLAA/blog-list-backend)
