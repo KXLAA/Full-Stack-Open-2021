@@ -1,7 +1,9 @@
 # [Full Stack Open 2021](https://fullstackopen.com/)
+
 This repository contains exercise solutions to the 2021 edition of the `Full Stack Open` course from the University of Helsinki. The course focuses on modern `JavaScript`-based web development with a focus on using `React`, `Redux`, `MongoDB`, `GraphQL` and `TypeScript` to build single page applications that use REST APIs built with `Node.js`.
 
 ## Table of Content
+
 - [Part 0: Fundamentals of Web apps](./part0)
   - [0.4: new note](part0/0.4.md)
   - [0.5: Single page app](part0/0.5.md)
@@ -19,7 +21,9 @@ This repository contains exercise solutions to the 2021 edition of the `Full Sta
   - [3.10-3.11: Phonebook Full stack deploy to heroku](https://phonebook-backend-full-stack-o.herokuapp.com/)
   - [3.12-3.18: Phonebook database](https://github.com/KXLAA/phonebook-backend/tree/main/models)
   - [3.19-3.21: Validation](https://github.com/KXLAA/phonebook-backend/blob/main/models/person.js)
-  -  [3.22: ESLint](https://github.com/KXLAA/phonebook-backend/blob/main/models/person.js)
+  - [3.22: ESLint](https://github.com/KXLAA/phonebook-backend/blob/main/models/person.js)
 - [Part 4: Testing Express servers, user administration](./part4)
   - [4.1-4.14: Testing Express servers](https://github.com/KXLAA/blog-list-backend)
   - [4.15-4.23: user administration](https://github.com/KXLAA/blog-list-backend)
+- [Part 5: Testing React apps](./part5)
+  - [5.1-5.4: Login in frontend](https://github.com/KXLAA/blog-list-front-end)
