@@ -27,3 +27,5 @@ This repository contains exercise solutions to the 2021 edition of the `Full Sta
   - [4.15-4.23: user administration](https://github.com/KXLAA/blog-list-backend)
 - [Part 5: Testing React apps](./part5)
   - [5.1-5.4: Login in frontend](https://github.com/KXLAA/blog-list-front-end)
+- [Part 6: State management with Redux](./part6)
+  - [6.1-6.2: Unicafe Redux](https://github.com/KXLAA/unicafe-redux)
