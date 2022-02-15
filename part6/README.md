@@ -5,3 +5,4 @@
 ## Table of Content
 
 - [6.1-6.2: Unicafe Redux](https://github.com/KXLAA/unicafe-redux)
+- [6.3-6.21: Anecdotes Redux](https://github.com/KXLAA/anecdotes-redux)

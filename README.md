@@ -29,3 +29,7 @@ This repository contains exercise solutions to the 2021 edition of the `Full Sta
   - [5.1-5.22: Login in frontend & Testing React Apps](https://github.com/KXLAA/blog-list-front-end)
 - [Part 6: State management with Redux](./part6)
   - [6.1-6.2: Unicafe Redux](https://github.com/KXLAA/unicafe-redux)
+  - [6.3-6.21: Anecdotes Redux](https://github.com/KXLAA/anecdotes-redux)
+- [Part 7: React router, custom hooks, styling app with CSS and webpack](./part7)
+  - [6.1-6.2: Unicafe Redux](https://github.com/KXLAA/unicafe-redux)
+  - [6.3-6.21: Anecdotes Redux](https://github.com/KXLAA/anecdotes-redux)
