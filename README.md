@@ -31,5 +31,6 @@ This repository contains exercise solutions to the 2021 edition of the `Full Sta
   - [6.1-6.2: Unicafe Redux](https://github.com/KXLAA/unicafe-redux)
   - [6.3-6.21: Anecdotes Redux](https://github.com/KXLAA/anecdotes-redux)
 - [Part 7: React router, custom hooks, styling app with CSS and webpack](./part7)
-  - [6.1-6.2: Unicafe Redux](https://github.com/KXLAA/unicafe-redux)
-  - [6.3-6.21: Anecdotes Redux](https://github.com/KXLAA/anecdotes-redux)
+  - [7.1-7.3: React-router](https://github.com/KXLAA/unicafe-redux)
+  - [7.4-7.8: Custom hooks](https://github.com/KXLAA/anecdotes-redux)
+  - [7.9-7.21: Extending the Bloglist](https://github.com/KXLAA/anecdotes-redux)
