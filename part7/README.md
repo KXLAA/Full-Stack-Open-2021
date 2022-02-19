@@ -4,6 +4,6 @@
 
 ## Table of Content
 
-- [7.1-7.3: React-router](https://github.com/KXLAA/unicafe-redux)
-- [7.4-7.8: Custom hooks](https://github.com/KXLAA/anecdotes-redux)
+- [7.1-7.3: React-router](https://github.com/KXLAA/routed-anecdotes)
+- [7.4-7.8: Custom hooks](https://github.com/KXLAA/country-hook)
 - [7.9-7.21: Extending the Bloglist](https://github.com/KXLAA/anecdotes-redux)
