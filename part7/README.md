@@ -7,4 +7,4 @@
 - [7.1-7.3: React-router](https://github.com/KXLAA/routed-anecdotes)
 - [7.4-7.7: Custom hooks](https://github.com/KXLAA/country-hook)
 - [7.8: Custom hooks](https://github.com/KXLAA/ultimate-hooks)
-- [7.9-7.21: Extending the Bloglist](https://github.com/KXLAA/anecdotes-redux)
+- [7.9-7.21: Extending the Bloglist](https://github.com/KXLAA/blog-list-front-end)
