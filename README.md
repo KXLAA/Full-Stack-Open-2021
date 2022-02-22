@@ -2,6 +2,10 @@
 
 This repository contains exercise solutions to the 2021 edition of the `Full Stack Open` course from the University of Helsinki. The course focuses on modern `JavaScript`-based web development with a focus on using `React`, `Redux`, `MongoDB`, `GraphQL` and `TypeScript` to build single page applications that use REST APIs built with `Node.js`.
 
+## Certificate
+
+![Certificate](/assets/certificate-fullstack.png)
+
 ## Table of Content
 
 - [Part 0: Fundamentals of Web apps](./part0)
