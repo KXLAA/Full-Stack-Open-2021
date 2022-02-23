@@ -4,6 +4,6 @@
 
 ## Table of Content
 
-- [9.1-9.7: First steps with TypeScript](https://github.com/KXLAA/library-gql-backend)
-- [9.8-9.13: Typing the express app](https://github.com/KXLAA/library-frontend)
+- [9.1-9.7: First steps with TypeScript](https://github.com/KXLAA/typescript-fso)
+- [9.8-9.13: Typing the express app](https://github.com/KXLAA/patientor-be)
 - [9.14-8.27: React with types](https://github.com/KXLAA/library-gql-backend)
